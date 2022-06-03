@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/charts/feature-cuts/src",
+  "prefix": "draftio",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/charts/feature-cuts"],
+      "options": {
+        "jestConfig": "libs/charts/feature-cuts/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/charts/feature-cuts/**/*.ts", "libs/charts/feature-cuts/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

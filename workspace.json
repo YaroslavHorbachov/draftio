@@ -2,6 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "assetbot": "apps/assetbot"
+    "assetbot": "apps/assetbot",
+    "charts": "apps/charts",
+    "charts-e2e": "apps/charts-e2e",
+    "charts-feature-cuts": "libs/charts/feature-cuts",
+    "charts-feature-dashboard": "libs/charts/feature-dashboard",
+    "shared-components": "libs/shared/components",
+    "shared-models": "libs/shared/models"
   }
 }

@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@draftio/charts-feature-cuts": ["libs/charts/feature-cuts/src/index.ts"],
+      "@draftio/charts/feature-dashboard": ["libs/charts/feature-dashboard/src/index.ts"],
+      "@draftio/shared-components": ["libs/shared/components/src/index.ts"],
+      "@draftio/shared-models": ["libs/shared/models/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

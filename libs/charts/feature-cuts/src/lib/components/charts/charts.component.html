@@ -1,0 +1,20 @@
+<!-- <app-chart [type]="'pie'"></app-chart>
+<app-chart [type]="'pie'"></app-chart>
+<app-chart [type]="'pie'"></app-chart>
+<app-chart [type]="'pie'"></app-chart> -->
+
+<draftio-chart [labels]="allNamesLabels$ | async" [data]="allNamesDatasets$ | async"></draftio-chart>
+
+<!-- <dra-chart
+  [type]="'pie'"
+  [labels]="colorLabels$ | async"
+  [data]="colorDataset$ | async"
+></app-chart>
+
+<app-chart
+  [type]="'pie'"
+  [labels]="cardTypeLabels$ | async"
+  [data]="cardTypeDataset$ | async"
+></app-chart> -->
+
+<!-- <p>{{ data$ | async | json }}</p> -->
