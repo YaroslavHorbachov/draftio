@@ -5,6 +5,26 @@
 
 <draftio-chart [labels]="allNamesLabels$ | async" [data]="allNamesDatasets$ | async"></draftio-chart>
 
+<div class="medium">
+  <draftio-chart
+    type="doughnut"
+    [labels]="allColorsLabels$ | async"
+    [data]="allColorsDatasets$ | async"
+  ></draftio-chart>
+</div>
+
+<div class="medium">
+  <draftio-chart
+    type="doughnut"
+    [labels]="commonColorsLabels$ | async"
+    [data]="commonColorsDatasets$ | async"
+  ></draftio-chart>
+</div>
+
+<div class="medium">
+  <draftio-chart [labels]="analysisAllNamesLabels$ | async" [data]="analysisAllNamesDatasets$ | async"></draftio-chart>
+</div>
+
 <!-- <dra-chart
   [type]="'pie'"
   [labels]="colorLabels$ | async"

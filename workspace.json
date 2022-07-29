@@ -7,7 +7,13 @@
     "charts-e2e": "apps/charts-e2e",
     "charts-feature-cuts": "libs/charts/feature-cuts",
     "charts-feature-dashboard": "libs/charts/feature-dashboard",
-    "shared-components": "libs/shared/components",
-    "shared-models": "libs/shared/models"
+    "shared-auth-api": "libs/shared/auth-api",
+    "shared-auth-client": "libs/shared/auth-client",
+    "shared-common": "libs/shared/common",
+    "shared-data-access-api": "libs/shared/data-access-api",
+    "shared-ui-components": "libs/shared/ui-components",
+    "shelf": "apps/shelf",
+    "shelf-api": "apps/shelf-api",
+    "shelf-feature-dashboard": "libs/shelf/feature-dashboard"
   }
 }

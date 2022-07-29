@@ -20,14 +20,6 @@
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -43,7 +35,10 @@
       "style": "scss"
     }
   },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
+  "defaultProject": "shelf-api",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
   }
 }

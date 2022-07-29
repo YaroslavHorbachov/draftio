@@ -17,8 +17,14 @@
     "paths": {
       "@draftio/charts-feature-cuts": ["libs/charts/feature-cuts/src/index.ts"],
       "@draftio/charts/feature-dashboard": ["libs/charts/feature-dashboard/src/index.ts"],
-      "@draftio/shared-components": ["libs/shared/components/src/index.ts"],
-      "@draftio/shared-models": ["libs/shared/models/src/index.ts"]
+      "@draftio/shared-data-access-api": ["libs/shared/data-access-api/src/index.ts"],
+      "@draftio/shared-data-access-firebase": ["libs/shared/data-access-firebase/src/index.ts"],
+      "@draftio/shared-ui-components": ["libs/shared/ui-components/src/index.ts"],
+      "@draftio/shared-util-models": ["libs/shared/util-models/src/index.ts"],
+      "@draftio/shared/auth-api": ["libs/shared/auth-api/src/index.ts"],
+      "@draftio/shared/auth-client": ["libs/shared/auth-client/src/index.ts"],
+      "@draftio/shared/common": ["libs/shared/common/src/index.ts"],
+      "@draftio/shelf/feature-dashboard": ["libs/shelf/feature-dashboard/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

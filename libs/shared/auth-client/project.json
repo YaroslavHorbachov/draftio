@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/auth-client/src",
+  "prefix": "draftio",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/auth-client"],
+      "options": {
+        "jestConfig": "libs/shared/auth-client/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/auth-client/**/*.ts", "libs/shared/auth-client/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

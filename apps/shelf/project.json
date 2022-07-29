@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/shelf/src",
+  "prefix": "draftio",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/shelf",
+        "index": "apps/shelf/src/index.html",
+        "main": "apps/shelf/src/main.ts",
+        "polyfills": "apps/shelf/src/polyfills.ts",
+        "tsConfig": "apps/shelf/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/shelf/src/favicon.ico", "apps/shelf/src/assets"],
+        "styles": ["apps/shelf/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/shelf/src/environments/environment.ts",
+              "with": "apps/shelf/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "shelf:build:production"
+        },
+        "development": {
+          "browserTarget": "shelf:build:development"
+        }
+      },
+      "options": {
+        "proxyConfig": "apps/shelf/proxy.conf.json"
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "shelf:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/shelf/**/*.ts", "apps/shelf/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,20 @@
+<!-- <ng-container *ngIf="{ isLoading: isLoading$ | async, user: user$ | async } as authContext">
+  <h1 *ngIf="authContext.isLoading; else mainTemplate">Loading ...</h1>
+
+  <ng-template #mainTemplate>
+    <div *ngIf="authContext.user; else loginTemplate">
+      <router-outlet></router-outlet>
+    </div>
+
+    <ng-template #loginTemplate>
+      <draftio-login></draftio-login>
+    </ng-template>
+  </ng-template>
+</ng-container> -->
+
+<ng-container [ngSwitch]="step">
+  <draftio-login *ngSwitchCase="steps.Login" (save)="onLoginSave()"></draftio-login>
+  <draftio-register *ngSwitchCase="steps.Register" (save)="onRegisterSave($event)"></draftio-register>
+
+  <p *ngSwitchDefault>Logged In</p>
+</ng-container>

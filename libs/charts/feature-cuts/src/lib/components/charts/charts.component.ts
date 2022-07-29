@@ -10,14 +10,15 @@ import { CutsService } from '../../services';
 export class ChartsComponent {
   constructor(private readonly cutsService: CutsService) {}
 
-  // public readonly colorDataset$ = this.cutsService.colorDataset$.pipe(tap(console.log));
-
-  // public readonly colorLabels$ = this.cutsService.colorLabels$.pipe(tap(console.log));
-
-  // public readonly cardTypeDataset$ = this.cutsService.cardTypeDatasets$.pipe(tap(console.log));
-
-  // public readonly cardTypeLabels$ = this.cutsService.cardTypeLabels$.pipe(tap(console.log));
-
   public readonly allNamesLabels$ = this.cutsService.allNamesLabels$;
   public readonly allNamesDatasets$ = this.cutsService.allNamesDatasets$;
+
+  public readonly allColorsLabels$ = this.cutsService.allColorsLabels$;
+  public readonly allColorsDatasets$ = this.cutsService.allColorsDatasets$;
+
+  public readonly commonColorsLabels$ = this.cutsService.commonColorsLabels$;
+  public readonly commonColorsDatasets$ = this.cutsService.commonColorsDatasets$;
+
+  public readonly analysisAllNamesLabels$ = this.cutsService.analysisAllNamesLabels$;
+  public readonly analysisAllNamesDatasets$ = this.cutsService.analysisAllNamesDatasets$;
 }

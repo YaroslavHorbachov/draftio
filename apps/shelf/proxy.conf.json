@@ -1,0 +1,7 @@
+{
+  "/shelfapi": {
+    "target": "http://localhost:3334/api",
+    "secure": false,
+    "pathRewrite": { "^/shelfapi": "" }
+  }
+}

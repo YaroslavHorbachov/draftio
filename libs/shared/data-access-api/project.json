@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/data-access-api/src",
+  "prefix": "draftio",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/data-access-api/**/*.ts", "libs/shared/data-access-api/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

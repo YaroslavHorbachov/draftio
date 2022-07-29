@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChartModule } from '@draftio/shared-components';
+import { ChartModule } from '@draftio/shared-ui-components';
 import { ChartsComponent } from './components';
 
 const routes: Routes = [{ path: '', component: ChartsComponent }];

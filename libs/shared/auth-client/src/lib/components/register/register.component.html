@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" formControlName="firstName" />
+  </div>
+  <div>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" formControlName="lastName" />
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="form.invalid">Save</button>
+  </div>
+</form>

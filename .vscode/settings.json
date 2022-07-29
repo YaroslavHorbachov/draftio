@@ -1,5 +1,7 @@
 {
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
-  }
+  },
+  "angular.disableAutomaticNgcc": true,
+  "angular.log": "off",
 }
